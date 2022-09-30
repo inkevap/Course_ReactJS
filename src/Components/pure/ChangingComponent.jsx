@@ -9,28 +9,44 @@ const ChangingComponent = () => {
         backgroundColor: 'black'
     })
 
-    const color = (val) => {
-
-        if (val) {
-            setBoxStyle({
-                ...boxStyle,
-                backgroundColor: `rgb(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255})`
-            })
-        } else {
-            setBoxStyle({
-                ...boxStyle,
-                backgroundColor: 'black'
-            })
-        }
+    let rgb = {
+        r: 0,
+        g: 0,
+        b: 0
     }
+
+    const [timer, setTimer] = useState(0);
+
+    const color = () => {
+        rgb = {
+            r: Math.floor(Math.random() * 256),
+            g: Math.floor(Math.random() * 256),
+            b: Math.floor(Math.random() * 256)
+        }
+
+        setBoxStyle({
+            ...boxStyle,
+            backgroundColor: `rgb(${rgb.r},${rgb.g},${rgb.b})`
+        })
+    }
+
+
+    const ChangingColor = () => {
+        return setTimer(setInterval(color, 500));
+    };
+
+    const StopChanging = () => {
+        return clearInterval(timer);
+    };
 
     return (
         <div
             style={boxStyle}
-            onMouseOver={() => color(true)}
-            onMouseLeave={() => color(false)}
-            onDoubleClick={() => color(false)}
+            onMouseOver={ChangingColor}
+            onMouseLeave={StopChanging}
+            onDoubleClick={StopChanging}
         >
+      {boxStyle.backgroundColor}
         </div>
     );
 }

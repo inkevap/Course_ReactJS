@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import ContactListComponent from './Components/container/contact_list'
+import ChangingComponent from './Components/pure/ChangingComponent';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
       <div className='body'>
-        <ContactListComponent></ContactListComponent>
+        <ChangingComponent></ChangingComponent>
         </div>
       </header>
     </div>

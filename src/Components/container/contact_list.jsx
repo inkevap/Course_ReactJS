@@ -11,16 +11,11 @@ const ContactListComponent = () => {
 
     const defaultcontact = new Contact('Kevin', 'Pocon', 'inkev.ap@gmail.com', true);
     const defaultcontact2 = new Contact('Calvin', 'Pocon', 'CPF@gmail.com', false);
-    const defaultcontact3 = new Contact('Calvin', 'Pocon', 'CPF@gmail.com', false);
-    const defaultcontact4 = new Contact('Calvin', 'Pocon', 'CPF@gmail.com', false);
-    const defaultcontact5 = new Contact('Calvin', 'Pocon', 'CPF@gmail.com', false);
-    const defaultcontact6 = new Contact('Calvin', 'Pocon', 'CPF@gmail.com', false);
 
     const [CreatingNewContact, SetCreatingState] = useState(false);
 
     const [Contacts, setContacts] = useState([
-        defaultcontact, defaultcontact2, defaultcontact3, defaultcontact4,
-        defaultcontact5, defaultcontact6]);
+        defaultcontact, defaultcontact2]);
 
     const StatusChange = (contact) => {
         const TempContacts = [...Contacts];
@@ -62,10 +57,10 @@ const ContactListComponent = () => {
                         {(Contacts.length > 0)
                             ? <table className='table-dark table'>
                                 <thead >
-                                    <th classname='col-3 d-table-row'>Name</th>
-                                    <th classname='col-3'>Surname</th>
-                                    <th classname='col-1'>Email</th>
-                                    <th classname='col-1'>Online</th>
+                                    <th className='col-1'>Name</th>
+                                    <th className='col-1'>SurName</th>
+                                    <th className='col-1'>Email</th>
+                                    <th className='col-1'>Online</th>
                                 </thead>
                                 <tbody className='table-group-divider' >
                                     {

@@ -14,11 +14,11 @@ const ContactComponent = ({ contact, StateFunc, DeleteFunc }) => {
 
     return (
         <tr>
-            <th classname='col-2' >{contact.name}</th>
-            <td classname='col-2'>{contact.surname}</td>
-            <td classname='col-1'>{contact.email}</td>
-            <td classname='col-1' onClick={() => StateFunc(contact)}>{TaskStatusChange()}</td>
-            <td classname='col-1'>
+            <th className='col-1' >{contact.name}</th>
+            <td className='col-1'>{contact.surname}</td>
+            <td className='col-1'>{contact.email}</td>
+            <td className='col-1' onClick={() => StateFunc(contact)}>{TaskStatusChange()}</td>
+            <td className='col-1'>
                 <i className='bi bi-trash'
                     style={{ color: 'red', fontSize: '2rem' }}
                     onClick={() => DeleteFunc(contact)}></i>

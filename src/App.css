@@ -37,10 +37,3 @@
   }
 }
 
-.body {
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: flex-start;
-  background-color: rgb(237, 250, 179);
-}

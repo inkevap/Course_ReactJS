@@ -10,9 +10,9 @@ const NewContact = ({ Creating, ContactNew }) => {
     const emailRef = useRef('');
     const statusRef = useRef(false);
 
-    const CreateState = () => {
-        Creating();
-        setCreatingState(!CreatingState);
+    const CreateState = (state) => {
+        Creating(state);
+        setCreatingState(state);
     }
 
     const SendNewContact = (e) => {
@@ -22,13 +22,13 @@ const NewContact = ({ Creating, ContactNew }) => {
             surnameRef.current.value,
             emailRef.current.value,
             statusRef.current.checked));
-            CreateState();
+        CreateState();
     }
 
     const AmICreating = () => {
         return CreatingState
             ? <form onSubmit={SendNewContact}>
-                <div className='d-flex flex-column align-items-center'>
+                <div className='form-control d-flex flex-column align-items-center text-bg-dark'>
                     <span className='d-flex flex-column'>
                         <span className='d-flex align-items-center'>Name:
                             <input ref={nameRef} id='Name' className='flex-fill ms-1 mt-1 mb-1' type={'text'} required autoFocus></input>
@@ -43,12 +43,14 @@ const NewContact = ({ Creating, ContactNew }) => {
                             <input ref={statusRef} id='status' className='flex-fill ms-1 mt-1 mb-3' type={'checkbox'}></input>
                         </span>
                     </span>
+                </div>
+                <div className='card-footer'>
                     <button type="submit" class="btn btn-primary">Create Contact</button>
-                    <button type="button" onClick={CreateState} class="btn btn-secondary">Cancel</button>
+                    <button type="button" onClick={() => CreateState(false)} class="btn btn-secondary">Cancel</button>
                 </div>
             </form>
-            : <div>
-                <button type="button" onClick={CreateState} class="btn btn-primary ">Create Contact</button>
+            : <div className='card-footer'>
+                <button type="button" onClick={() => CreateState(true)} class="btn btn-primary ">Create Contact</button>
             </div>
     }
 

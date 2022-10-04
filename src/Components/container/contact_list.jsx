@@ -6,8 +6,9 @@ import React, { useState } from 'react';
 import { Contact } from '../../models/contact.class'
 import ContactComponent from '../pure/contact';
 import NewContact from '../pure/forms/newContact';
+import PropTypes from 'prop-types'
 
-const ContactListComponent = () => {
+const ContactListComponent = ({Logout}) => {
 
     const defaultcontact = new Contact('Kevin', 'Pocon', 'inkev.ap@gmail.com', true);
     const defaultcontact2 = new Contact('Calvin', 'Pocon', 'CPF@gmail.com', false);
@@ -43,7 +44,7 @@ const ContactListComponent = () => {
     }
 
     return (
-        <div className='card bg-dark' style={{ width: '40rem' }}>
+        <div className='card bg-dark' >
             {CreatingNewContact
                 ? <span className='card-title text-bg-dark'>
                     <h1>New Contact:</h1>
@@ -57,10 +58,10 @@ const ContactListComponent = () => {
                         {(Contacts.length > 0)
                             ? <table className='table-dark table'>
                                 <thead >
-                                    <th className='col-1'>Name</th>
-                                    <th className='col-1'>SurName</th>
-                                    <th className='col-1'>Email</th>
-                                    <th className='col-1'>Online</th>
+                                    <th className='col'>Name</th>
+                                    <th className='col'>SurName</th>
+                                    <th className='col'>Email</th>
+                                    <th className='col'>Online</th>
                                 </thead>
                                 <tbody className='table-group-divider' >
                                     {
@@ -90,10 +91,14 @@ const ContactListComponent = () => {
             <NewContact
                 Creating={CreatingContact}
                 ContactNew={ContactNew}
+                Logout={Logout}
             ></NewContact>
         </div>
     );
 };
 
+ContactListComponent.propTypes = {
+    Logout: PropTypes.func.isRequired
+}
 
 export default ContactListComponent;

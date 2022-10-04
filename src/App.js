@@ -43,7 +43,7 @@ function App() {
           <Link to='/login'>| Login ||</Link>
           <Link to='/'>| Contacts ||</Link>
         </aside>
-        <main className='body'></main>
+        <main className='body'>
           <Routes>
             <Route path={"/"} element={
               (logged)

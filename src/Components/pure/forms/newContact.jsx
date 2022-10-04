@@ -1,10 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Contact } from '../../../models/contact.class';
-import { Formik, Form, ErrorMessage, Field } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import * as yup from 'yup';
 
-const NewContact = ({ Creating, ContactNew }) => {
+const NewContact = ({ Creating, ContactNew, Logout }) => {
     const [CreatingState, setCreatingState] = useState(false);
 
     const initialValues = {
@@ -104,6 +104,7 @@ const NewContact = ({ Creating, ContactNew }) => {
             </Formik>
             : <div className='card-footer'>
                 <button type="button" onClick={() => CreateState(true)} className="btn btn-primary ">Create Contact</button>
+                <button type="button" onClick={Logout} className="btn btn-secondary ">Logout</button>
             </div>
     }
 
@@ -116,7 +117,8 @@ const NewContact = ({ Creating, ContactNew }) => {
 
 NewContact.propTypes = {
     Creating: PropTypes.func.isRequired,
-    ContactNew: PropTypes.func.isRequired
+    ContactNew: PropTypes.func.isRequired,
+    Logout: PropTypes.func.isRequired
 };
 
 export default NewContact;

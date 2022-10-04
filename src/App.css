@@ -1,3 +1,19 @@
+html{
+  background-color: #282c34;
+  min-height: 100vh;
+}
+
+body{
+  background-color: transparent;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
 .App {
   text-align: center;
 }
@@ -15,12 +31,12 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(4vmin);
   color: rgb(0, 0, 0);
 }
 

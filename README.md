@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# Course_ReactJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🇪🇸 [Español](#-español) | 🇬🇧 [English](#-english)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🇪🇸 Español
 
-### `npm start`
+Proyecto de práctica del curso de **ReactJS**: una aplicación de lista de contactos con formularios de inicio de sesión y registro.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🚀 Funcionalidades
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🔐 Formularios de inicio de sesión y registro (`Loginform.jsx`, `Registerform.jsx`).
+- 📇 Listado de contactos (`contact_list.jsx`, `contact.jsx`).
+- ➕ Creación de nuevos contactos (`newContact.jsx`).
+- 🧭 Navegación entre páginas: Login, Registro, Contactos, y página 404 (`NotFoundPage.jsx`).
+- 🧱 Separación entre componentes "puros" (presentación) y "contenedor" (lógica).
 
-### `npm test`
+### 🔧 Tecnologías
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React (Create React App)
+- JSX
+- SCSS
 
-### `npm run build`
+### 🏗️ Estructura del proyecto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+src/
+├── Components/
+│   ├── container/       # Componentes con lógica (ej. contact_list)
+│   └── pure/             # Componentes de presentación (ej. contact, forms/)
+├── Pages/                 # Páginas: Login, Register, Contact, NotFound
+├── models/                 # Clases de dominio (contact, users)
+└── styles/                 # Estilos SCSS
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🚀 Cómo ejecutar
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+npm start
+```
 
-### `npm run eject`
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🧪 Pruebas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm test
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 📄 Licencia
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Proyecto académico.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🇬🇧 English
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+A practice project from the **ReactJS** course: a contact list application with login and registration forms.
 
-### Code Splitting
+### 🚀 Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- 🔐 Login and registration forms (`Loginform.jsx`, `Registerform.jsx`).
+- 📇 Contact listing (`contact_list.jsx`, `contact.jsx`).
+- ➕ Creating new contacts (`newContact.jsx`).
+- 🧭 Page navigation: Login, Register, Contacts, and a 404 page (`NotFoundPage.jsx`).
+- 🧱 Separation between "pure" (presentation) components and "container" (logic) components.
 
-### Analyzing the Bundle Size
+### 🔧 Technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- React (Create React App)
+- JSX
+- SCSS
 
-### Making a Progressive Web App
+### 🏗️ Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+src/
+├── Components/
+│   ├── container/       # Components with logic (e.g. contact_list)
+│   └── pure/             # Presentation components (e.g. contact, forms/)
+├── Pages/                 # Pages: Login, Register, Contact, NotFound
+├── models/                 # Domain classes (contact, users)
+└── styles/                 # SCSS styles
+```
 
-### Advanced Configuration
+### 🚀 How to Run
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm install
+npm start
+```
 
-### Deployment
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 🧪 Testing
 
-### `npm run build` fails to minify
+```bash
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 📄 License
+
+Academic project.
